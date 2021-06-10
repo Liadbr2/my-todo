@@ -9,10 +9,11 @@ p {
 .list-item-actions {
     order: 1;
     white-space: nowrap;
+    color: rgba(0, 0, 0, 0.4);
 }
   
-  .list-item-actions button {
-    cursor: pointer;
+  .list-item-actions .inactive {
+    cursor: default;
 }
 
 input {

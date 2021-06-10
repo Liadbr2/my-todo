@@ -1,5 +1,6 @@
-<mat-checkbox #todo (change)="isDone = !isDone" [class.checked]="todo.checked"><input matInput [(ngModel)]="item.content"/></mat-checkbox>
+<mat-checkbox class="animate__animated" [class.animate__headShake]="shake"  #todo (change)="isDone = !isDone" [class.checked]="todo.checked"><input [readonly]="!editEnabled" (click)="!editEnabled && lockShake()" matInput [(ngModel)]="item.content"/></mat-checkbox>
 <div class="list-item-actions">
-    <!-- <button mat-icon-button><mat-icon matListIcon color="accent" (click)="editEnabled = !editEnabled">locked</mat-icon></button> -->
-    <button mat-icon-button><mat-icon matListIcon color="accent" (click)="delete()">delete</mat-icon></button>
+    <button mat-icon-button [class.inactive]="!editEnabled"><mat-icon matListIcon [color]="editEnabled ? 'accent' : ''" (click)="editEnabled && delete()">delete</mat-icon></button>
+    <!-- <button mat-icon-button><mat-icon matListIcon color="accent" (click)="editEnabled = !editEnabled">{{"lock" + (editEnabled ? "_open" : "")}}</mat-icon></button> -->
+    <button mat-icon-button><mat-icon matListIcon color="accent" (click)="editEnabled = !editEnabled">{{editEnabled ? "lock_open" : "lock"}}</mat-icon></button>
 </div>

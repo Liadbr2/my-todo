@@ -13,10 +13,17 @@ export class TodoItemComponent {
     id: 0
    };
   @Output() deleteFromList = new EventEmitter<number>();
-  editEnabled: boolean = false;
+  editEnabled: boolean = true;
   delete() {
     this.deleteFromList.emit(this.item.id);
   }
 
   isDone = true;
+  shake = false;
+  lockShake() {
+    this.shake = true;
+    setTimeout(() => {
+      this.shake = false
+    }, 300);
+  };
 }
