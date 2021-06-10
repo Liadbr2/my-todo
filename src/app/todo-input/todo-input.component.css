@@ -1,0 +1,22 @@
+.form-field {
+  display: block;
+  font-size: 20px;
+  width: 85%;
+}
+
+.clear-input {
+  font-size: 4px;
+}
+
+.input-container {
+  margin: 10px 0 0 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.add-button-inactive {
+  color: rgba(0, 0, 0, 0.4);
+  cursor: default;
+}

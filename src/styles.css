@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: rgb(54, 54, 54);
+}
+
+mat-checkbox {
+  margin: 0 12px;
+  width: 100%;
+}
+
+.mat-list-item-content {
+  justify-content: space-between;
+}
+
+.mat-checkbox-layout {
+  white-space: normal !important;
+  width: 100%;
+}
+
+.mat-checkbox-label {
+  width: 100%;
+}
+
+.mat-list-item {
+  /* min-height: 56px; */
+  height: fit-content !important;
+}

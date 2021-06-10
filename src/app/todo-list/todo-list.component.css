@@ -1,0 +1,18 @@
+#todo-list-container {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 5px, #ff4081 14px 14px;
+  width: 500px;
+  padding-bottom: 50px;
+}
+
+todo-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
