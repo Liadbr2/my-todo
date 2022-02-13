@@ -1,5 +1,6 @@
 # My Todo List
 
+View in [Github Pages](https://liadbr2.github.io/my-todo/).  
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
 
 ## Development server
