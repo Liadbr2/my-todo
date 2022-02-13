@@ -1,16 +1,17 @@
 <div class="input-container">
   <mat-form-field class="form-field" color="accent">
-      <mat-label>What todo next?</mat-label>
-      <input matInput type="text" [(ngModel)]="value" (keyup.enter)="add()">
-      <button *ngIf="value" matSuffix mat-icon-button (click)="value=''">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
-    <button [class.add-button-inactive]="!value" mat-icon-button>
-      <!-- <mat-icon>{{"add_circle" + (value ? "" : "_outline")}}</mat-icon> -->
-      <mat-icon *ngIf="value; else activeAddIcon" color="accent" (click)="add()" matTooltip="Add" matTooltipPosition="right">add_circle</mat-icon>
-      <ng-template #activeAddIcon>
-        <mat-icon>add_circle_outline</mat-icon>
-      </ng-template>
+    <mat-label>What todo next?</mat-label>
+    <input matInput type="text" [(ngModel)]="value" (keyup.enter)="add()">
+    <button *ngIf="value" matSuffix mat-icon-button (click)="value=''">
+      <mat-icon>close</mat-icon>
     </button>
+  </mat-form-field>
+  <button [class.add-button-inactive]="!value" mat-icon-button>
+    <!-- <mat-icon>{{"add_circle" + (value ? "" : "_outline")}}</mat-icon> -->
+    <mat-icon *ngIf="value; else activeAddIcon" color="accent" (click)="add()" matTooltip="Add"
+      matTooltipPosition="right">add_circle</mat-icon>
+    <ng-template #activeAddIcon>
+      <mat-icon>add_circle_outline</mat-icon>
+    </ng-template>
+  </button>
 </div>
